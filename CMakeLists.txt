@@ -5,3 +5,4 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_subdirectory(never_disappear_client)
+add_subdirectory(never_disappear_client_test/os/looper)
