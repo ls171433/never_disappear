@@ -1,8 +1,9 @@
-#include "os/os_looper.hpp"
+#include "event/event.hpp"
 
 int main()
 {
-    never_disappear_client::os_looper main_looper;
-    main_looper.run();
+    never_disappear_client::event_dispatcher main_event_dispatcher;
+    main_event_dispatcher.set_enter_callback([&]{main_event_dispatcher.stop();});
+    main_event_dispatcher.run();
     return 0;
 }
